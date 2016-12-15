@@ -8,10 +8,10 @@ RealObject uses some open source projects to work properly:
 
 * [jQuery] - duh
 
-License
-
-----
+###License
 
 ACCT
+
+----
 
 **Free Software, Hell Yeah!**
