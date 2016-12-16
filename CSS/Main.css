@@ -148,7 +148,7 @@ top:17px;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	padding: 1rem;
+	padding: 1em;
 }
 
 .footer footer-top {
@@ -214,6 +214,10 @@ top:17px;
 
 .col-1-2 {
     width: 45%;
+}
+
+.col-1-3 {
+    width: 30%;
 }
 
 .col-1-5 {
@@ -289,23 +293,23 @@ p {
 }
 
 h1 {
-    font-size: 2.286rem;
+    font-size: 2.286em;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 2em;
 }
 
 h3 {
-    font-size: 1.571rem;
+    font-size: 1.571em;
 }
 
 h4 {
-    font-size: 1.286rem;
+    font-size: 1.286em;
 }
 
 h5 {
-    font-size: 1.143rem;
+    font-size: 1.143em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -390,4 +394,137 @@ h1, h2, h3, h4, h5, h6 {
 
 .sw--margin-bottom-4 {
     margin-bottom: 20px;
+}
+
+.sw-grid-full {
+    margin: 30px auto 0 auto;
+    padding-top: 0;
+    padding-left: 30px;
+    padding-right: 0px;
+    width: 100%;
+    max-width: 1400px;
+}
+
+.sw--padding-top-5-percent {
+    padding-top: 5%;
+}
+
+.sw--padding-15-percent {
+    padding: 15%;
+}
+
+.sw--link-dark, .sw--link-dark:visited {
+    color: #183643;
+}
+
+a, a:visited, a:active {
+    cursor: pointer;
+    color: #08A3E9;
+    text-decoration: none;
+}
+
+.sw--margin-bottom-6 {
+    margin-bottom: 30px;
+}
+
+a img {
+    border: none;
+}
+
+/*img {
+	width: 100%;
+}
+*/
+.box {
+    background: white;
+}
+
+.box, .box-dark, .box-outline, .box-gray {
+    position: relative;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #e0e3e5;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+#pictureSlider {
+	max-height: 250px;
+	overflow: hidden;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.sw--font-size-24 {
+    font-size: 1.714em;
+}
+
+.sw--font-weight-heavy, .weight-heavy {
+    font-weight: 800;
+}
+
+p {
+    font-size: 14px;
+    line-height: 22px;
+    margin: 0 0 1.4rem 0;
+}
+
+.sw--margin-bottom-0 {
+    margin-bottom: 0px;
+}
+
+.sw--font-size-16 {
+    font-size: 1.143em;
+}
+
+.sw--font-weight-light, .weight-light {
+    font-weight: 300;
+}
+
+.btn-primary, .btn-buy-now, .btn-primary:visited, .btn-buy-now:visited {
+    border-color: #03b2ff;
+    background-color: #4FC9FF;
+    color: #fff;
+}
+
+.sw--margin-top-6 {
+    margin-top: 30px;
+}
+
+.sw--padding-top-0 {
+    padding-top: 0px;
+}
+
+.sw--padding-5-percent {
+    padding: 5%;
+}
+
+.sw--margin-bottom-1 {
+    margin-bottom: 5px;
+}
+
+.sw--font-size-22 {
+    font-size: 1.571em;
+}
+
+.sw--font-weight-heavy, .weight-heavy {
+    font-weight: 800;
+}
+
+.sw--font-size-16 {
+    font-size: 1.143em;
+}
+
+.sw--margin-right-4 {
+    margin-right: 20px;
+}
+
+.sw--font-weight-bold, .weight-bold {
+    font-weight: bold;
+}
+
+.sw--link-gray, .sw--link-gray:visited {
+    color: #183643;
 }

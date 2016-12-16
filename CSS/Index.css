@@ -1,0 +1,50 @@
+﻿img {
+	width: 100%;
+}
+
+.box {
+    background: white;
+}
+
+.box, .box-dark, .box-outline, .box-gray {
+    position: relative;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #e0e3e5;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+#pictureSlider {
+	max-height: 250px;
+	overflow: hidden;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.sw--font-size-24 {
+    font-size: 1.714em;
+}
+.sw--font-weight-heavy, .weight-heavy {
+    font-weight: 800;
+}
+
+p {
+    font-size: 14px;
+    line-height: 22px;
+    margin: 0 0 1.4rem 0;
+}
+
+.sw--margin-bottom-0 {
+    margin-bottom: 0px;
+}
+
+.sw--font-size-16 {
+    font-size: 1.143em;
+}
+
+.sw--font-weight-light, .weight-light {
+    font-weight: 300;
+}
