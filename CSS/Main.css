@@ -233,9 +233,34 @@ top:17px;
     margin-top: 10px;
 }
 
+.breathe-left {
+    margin-top: 10px;
+}
+
+.breathe-right {
+    margin-bottom: 10px;
+}
+
+.breathe-bottom {
+    margin-bottom: 10px;
+}
+
+.breathe-top-large {
+    margin-top: 20px;
+}
+
+.breathe-left-large {
+    margin-right: 20px;
+}
+
 .breathe-right-large {
     margin-right: 20px;
 }
+
+.breathe-bottom-large {
+    margin-bottom: 20px;
+}
+
 
 [class^="icon-"], [class*=" icon-"] {
     font-family: 'icons-sw' !important;
@@ -261,6 +286,22 @@ p {
 
 h1 {
     font-size: 2.286rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.571rem;
+}
+
+h4 {
+    font-size: 1.286rem;
+}
+
+h5 {
+    font-size: 1.143rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
