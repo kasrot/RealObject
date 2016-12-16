@@ -213,7 +213,7 @@ top:17px;
 }
 
 .col-1-2 {
-    width: 50%;
+    width: 45%;
 }
 
 .col-1-5 {
@@ -365,8 +365,29 @@ h1, h2, h3, h4, h5, h6 {
     background-position: -112px 0;
 }
 
+.value-props {
+    background: #36566F;
+    padding: 5% 0;
+    position: relative;
+}
+.value-props {
+    width: 100%;
+    padding: 50px 0;
+    display: block;
+    border-bottom: 1px solid #e0e3e5;
+    background: #EDEFF0;
+}
+.wrapper-full {
+    width: 100%;
+    display: block;
+    background: white;
+    overflow: hidden;
+}
 
+.clearfix, .container {
+    display: block;
+}
 
-
-
-
+.sw--margin-bottom-4 {
+    margin-bottom: 20px;
+}
