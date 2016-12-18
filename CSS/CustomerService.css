@@ -1,0 +1,25 @@
+﻿.sw--padding-vert-2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.sw--margin-bottom-6 {
+    margin-bottom: 30px;
+}
+
+.sw--clearfix:before, .sw--clearfix:after {
+    display: table;
+    content: " ";
+}
+
+.sw--clearfix:after {
+    clear: both;
+}
+
+.sw--margin-top-0 {
+    margin-top: 0px;
+}
+
+.noborder {
+	border-style: none;
+}

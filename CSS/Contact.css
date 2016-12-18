@@ -1,0 +1,16 @@
+﻿a, a:visited, a:active {
+    cursor: pointer;
+    color: #08A3E9;
+    text-decoration: none;
+}
+
+hr {
+    background: #e0e3e5;
+    color: #e0e3e5;
+    clear: both;
+    float: none;
+    width: 100%;
+    height: 1px;
+    margin: 20px 0;
+    border: none;
+}

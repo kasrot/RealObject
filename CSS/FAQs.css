@@ -1,0 +1,42 @@
+﻿ul {
+    list-style: disc;
+    margin: 0 0 0 20px;
+    padding: 0;
+}
+
+.faq-table-of-contents ul, .faqQuestion ul {
+    padding-left: 30px;
+}
+
+.faq-table-of-contents ul li, .faqQuestion ul li {
+    list-style: disc;
+    padding-bottom: 0;
+}
+
+.faqQuestion {
+    margin: 10px 0;
+    padding: 10px 0 0 0;
+    border-top: 1px solid #ddd;
+}
+
+a, a:visited, a:active {
+    cursor: pointer;
+    color: #08A3E9;
+    text-decoration: none;
+}
+
+.icon-permalink {
+    display: none;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icons-sw' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
