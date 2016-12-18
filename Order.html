@@ -1,0 +1,314 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<title>RealObjec Checkout - RealObject 3D Printing - RealObject</title>
+	<link href="CSS/Main.css" rel="stylesheet" type="text/css" />
+	<link href="JavaScripts/jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet">
+	<script src="JavaScripts/jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+	<script src="JavaScripts/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+
+	<script>
+		$(function() {
+			$("input:text, textarea").addClass("ui-widget ui-corner-all");
+			$("#payment").hide();
+			$("#review").hide();
+			$("#confirm-shipping").hide();
+			$("#confirm-payment1").hide();
+			$("#confirm-payment2").hide();
+			
+			$("#Continue").click(function() {
+				$("#txtFirstName").text($("#firstName").val());
+				$("#txtLastName").text($("#lastName").val());
+				$("#txtAddress1").text($("#address1").val());
+				$("#txtAddress2").text($("#address2").val());
+				$("#txtCity").text($("#city").val());
+				$("#txtState").text($("#state").val());
+				$("#txtZip").text($("#zip").val());
+
+				$("#payment").show();
+				$("#shipping").slideUp("slow");
+				
+			});
+			
+			$("#addPayment").click(function() {
+				if ($("#CreditCard").is(':checked'))
+				{
+					var card = $("#cardNumber").val();
+					var card1 = card.slice(card.length - 4, card.length);
+							
+					$("#txtCardNumber").text("****" + card1);
+					$("#txtZip2").text($("#zip").val());
+					$("#confirm-payment1").show();
+					$("#confirm-payment2").hide();
+				} else {
+					$("#confirm-payment1").hide();
+					$("#confirm-payment2").show();
+				}
+				
+				$("#confirm-shipping").show();
+				$("#review").show();
+				$("#payment").hide();
+				$("payment").slideUp("slow");
+			});
+		});
+
+	</script>
+</head>
+
+<body>
+	<div id="masthead">
+		<div id="logo">
+			<a class="frontLogo" href="Index.html">
+				<b>Real<span class="backLogo">Object</span></b>
+			</a>
+		</div>
+		<div id="navbar">
+			<ul class="topnav" id="menu">
+				<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+				<li><a class="active" href="Index.html">Home</a></li>
+				<li><a href="Shop.html">Shop</a></li>
+				<li><a href="3DPrint.html">Your 3D Print</a></li>
+				<li><a href="Contact.html">Contact Us</a></li>
+				<li><a href="About%20Us.html">About Us</a></li>
+				<li><a href="FAQs.html">FAQs</a></li>
+				<li class="icon">
+					<a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="container">
+		<!-- [Page Body] - Start -->
+		<div class="sw-grid">
+			<div class="wrapper-full value-props text-center" style="padding: 4% 0; background-color: #F5F7F8">
+				<h1 class="sw--magin-bottom-1">Checkout</h1>
+				<h4 style="margin-bottom: 0; font-weight: 300; color: #445258;">Easy Quick 3-steps checkout</h4>
+			</div>
+		</div>
+		<div class="sw-grid">
+			
+			<div class="col-1-1">
+				<h5>1. Shipping</h5>
+			</div>
+			<div id="shipping">
+				<div class="col-1-2 sw--padding-vert-2 sw--clearfix sw--padding-bottom-2">
+					<label class="col-1-1" for="firstName">First Name <span style="color: red;">*</span ></label>
+					<input id="firstName" type="text" class="col-1-1" name="firstName" value="" style="width:80%"/>
+				</div>
+				<div class="col-1-2 sw--padding-vert-2 sw--clearfix sw--padding-bottom-2">
+					<label class="col-1-1" for="lastName">Last Name <span style="color: red;">*</span ></label>
+					<input id="lastName" type="text" class="col-1-1" name="Lastame" value="" style="width:80%"/>
+				</div>
+				<div class="col-1-2 sw--padding-vert-2 sw--clearfix sw--padding-bottom-2">
+					<label class="col-1-1" for="phone">Phone <span style="color: red;">*</span ></label>
+					<input id="phone" type="text" class="col-1-1" name="phone" value="" style="width:80%"/>
+				</div>
+				<div class="col-1-2 sw--padding-vert-2 sw--clearfix sw--padding-bottom-2">
+					<label class="col-1-1" for="email">Email<span style="color: red;">*</span ></label>
+					<input id="email" type="text" class="col-1-1" name="email" value="" style="width:80%"/>
+				</div>
+				<div class="col-1-1">
+				<div class="col-1-2 sw--padding-vert-2 sw--clearfix sw--padding-bottom-2">
+					<label class="col-1-1" for="addressType">Address Type<span style="color: red;">*</span ></label>
+					<select id="addressType" name="addressType" class="ui-widget ui-corner-all">
+						<option value="Residential">Residential</option>
+						<option value="Commercial">Commercial</option>
+					</select>
+				</div>
+				</div>
+				<div class="col-1-2 sw--padding-vert-2 sw--clearfix sw--padding-bottom-2">
+					<label class="col-1-1" for="address1">Address<span style="color: red;">*</span ></label>
+					<input id="address1" type="text" class="col-1-1" name="address1" value="" style="width:80%"/>
+				</div>
+				<div class="col-1-2 sw--padding-vert-2 sw--clearfix sw--padding-bottom-2">
+					<label class="col-1-1" for="address2">Address2<span style="color: red;">*</span ></label>
+					<input id="address2" type="text" class="col-1-1" name="address2" value="" style="width:80%"/>
+				</div>
+				<div class="col-1-2 sw--padding-vert-2 sw--clearfix sw--padding-bottom-2">
+					<label class="col-1-1" for="city">City<span style="color: red;">*</span ></label>
+					<input id="city" type="text" class="col-1-1" name="city" value="" style="width:80%"/>
+				</div>
+				<div class="col-1-2 sw--padding-vert-2 sw--clearfix sw--padding-bottom-2">
+					<label class="col-1-1" for="state">State/Province<span style="color: red;">*</span ></label>
+					<input id="state" type="text" class="col-1-1" name="state" value="" style="width:80%"/>
+				</div>
+				<div class="col-1-2 sw--padding-vert-2 sw--clearfix sw--padding-bottom-4">
+					<label class="col-1-1" for="zip">Zip/Postal Code<span style="color: red;">*</span ></label>
+					<input id="zip" type="text" class="col-1-1" name="zip" value="" style="width:80%"/>
+				</div>
+				<div class="col-1-2 sw--padding-vert-2 sw--clearfix sw--padding-bottom-4">
+					<label class="col-1-1" for="country">Country<span style="color: red;">*</span ></label>
+					<input id="country" type="text" class="col-1-1" name="country" value="United States of America" style="width:80%" disabled="disabled"/>
+				</div>
+				<div class="class-1-1 text-center">
+					<input type="submit" id="Continue" name value="Continue" class="ui-button ui-widget ui-corner-all">
+				</div>
+			</div>
+			<div id="confirm-shipping">
+				<label id="txtFirstName"></label>&nbsp;<label id="txtLastName"></label>
+				<br>
+				<label id="txtAddress1"></label>&nbsp;<label id="txtAddress2"></label>
+				<br>
+				<label id="txtCity"></label>,&nbsp;<label id="txtState"></label>&nbsp;<label id="txtZip"></label>
+			</div>
+			<hr style="float: left;">
+			<div class="col-1-1">
+				<h5>2. Payment</h5>
+				<div id="payment">
+					<form>
+						<div class="col-1-1 sw--padding-bottom-1">
+							<input type="radio" id="CreditCard" name="paytype" checked="checked" >
+							<label for="CreditCard">CreditCard</label>
+						</div>
+						<div class="col-1-1" style="padding-left: 25px;">
+							<div class="col-1-2 sw--padding-bottom-2">
+								<label class="col-1-1" for="cardNumber">Card Number</label>
+								<input id="cardNumber" type="text" class="col-1-1" name="cardNumber" value="" style="width:80%"/>
+							</div>
+							<div class="col-1-5 sw--padding-bottom-2">
+								<label class="col-1-1" for="cardExpire">Expiration Date</label>
+								<input id="cardExpire" type="text" class="col-1-1" name="cardExpire" value="" style="width:80%"/>
+							</div>
+							<div class="col-1-5 sw--padding-bottom-2">
+								<label class="col-1-1" for="securityCode">Security Code</label>
+								<input id="securityCode" type="text" class="col-1-1" name="securityCode" value="" style="width:80%"/>
+							</div>
+						</div>
+						<hr style="float: left;">
+						<div>
+							<input type="radio" id="PayPal" name="paytype">
+							<label for="PayPal">PayPal</label>
+						</div>
+					</form>
+					<div class="text-center">
+						<input type="submit" id="addPayment" value="Add Payment Method" class="ui-button ui-widget ui-corner-all">
+					</div>
+				</div>
+				<div id="confirm-payment1">
+					<label id="txtCardNumber"></label>
+					<br>
+					<label id="txtZip2"></label>&nbsp;US
+				</div>
+				<div id="confirm-payment2">
+					PayPal
+				</div>
+			</div>
+			<hr style="float: left;">
+			<div class="col-1-1">
+				<h5>3. Review and Complete</h5>
+				<div id="review">
+					<div>
+					<input type="checkbox" id="complete" />
+					<label for="complete">I have read and agree to the <a href="">Terms of Service</a> and <a href="Privacy-policy">Privacy Policy</a>.</label>
+					</div>
+					<div class="text-center sw--margin-bottom-4 sw--margin-top-6">
+						<input type="submit" name value="Complete Order" class="ui-button ui-widget ui-corner-all">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- [Page Body] - End -->
+	</div>
+	<div id="footer" class="footer wraper-full">
+		<div id="footer-top" class="footer-top sw-grid">
+			<div id="footer-shop" class="footer-links-col col-1-5">
+				<h5 class="bottom-large">SHOP</h5>
+				<ul>
+					<li class="footer-link">
+						<a href="Shop.html">Our Products</a>
+					</li>
+					<li class="footer-link">
+						<a href="#shop">Your Design</a>
+					</li>
+				</ul>
+			</div>
+			<div id="footer-space1" class="footer-links-col col-1-5"></div>
+			<div id="footer-help" class="footer-links-col col-1-5">
+				<h5 class="bottom-large">HELP</h5>
+				<ul>
+					<li class="footer-link">
+						<a href="HelpCenter.html">Help Center</a>
+					</li>
+					<li class="footer-link">
+						<a href="Contact.html">Contact Us</a>
+					</li>
+					<li class="footer-link">
+						<a href="FAQs.html">FAQs</a>
+					</li>
+					<li class="footer-link">
+						<a href="ShippingInfo.html">Shipping Info</a>
+					</li>
+					<li class="footer-link">
+						<a href="ReturnPolicy.html">Return Policy</a>
+					</li>
+
+				</ul>
+			</div>
+			<div id="footer-space2" class="footer-links-col col-1-5"></div>
+			<div id="footer-company" class="footer-links-col col-1-5">
+				<h5 class="bottom-large">COMPANY</h5>
+				<ul>
+					<li class="footer-link">
+						<a href="About%20Us.html">About Us</a>
+					</li>
+					<li class="footer-link">
+						<a href="Carrers.html">Carrers</a>
+					</li>
+					<li class="footer-link">
+						<a href="Partner.html">Become a Partner</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="breathe-top sw-grid">
+			<div class="col-1-1">
+				<div class="footer-bottom">
+					<div id="footer-social">
+						<ul class="social-networks text-center footer-social">
+							<li>
+								<a class="rss" href="#facebook">rss</a>
+							</li>
+							<li>
+								<a class="facebook" href="#facebook">facebook</a>
+							</li>
+							<li>
+								<a class="youtube" href="#facebook">youtube</a>
+							</li>
+							<li>
+								<a class="twitter" href="#facebook">twitter</a>
+							</li>
+							<li>
+								<a class="blogger" href="#facebook">blogger</a>
+							</li>
+							<li>
+								<a class="googleplus" href="#facebook">googleplus</a>
+							</li>
+							<li>
+								<a class="flickr" href="#facebook">flickr</a>
+							</li>
+
+						</ul>
+					</div>
+					<div id="footer-legal">
+						<ul class="text-center footer-legal">
+							<li class="footer-link copyright breathe-right-large">Copyright © 2016 RealObject, Inc. All rights reserved.</li>
+							<li class="footer-link privacy breathe-right-large">
+								<a href="Privacy-policy.html">Privacy</a>
+							</li> 
+							<li class="footer-link terms breathe-right-large">
+								<a href="Terms.html">Terms</a>
+							</li> 
+							<li class="footer-link privacy">
+								<a href="Content-policy.html">Content & Copyright</a>
+							</li> 
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
